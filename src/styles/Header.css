@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #075e54;
+  color: white;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.user-info .user-name { font-weight: bold; }
+.user-info .user-status { font-size: 0.75rem; opacity: 0.8; }
