@@ -2,28 +2,49 @@
   display: flex;
   align-items: center;
   padding: 10px 15px;
-  background-color: #121b22;
-  border-top: 1px solid #2a3942;
+  background-color: var(--bg-secondary);
+  gap: 8px;
+  border-top: 1px solid var(--border-color);
 }
 
 .chat-input input {
   flex: 1;
   padding: 10px 15px;
-  border-radius: 20px;
+  border-radius: 8px;
   border: none;
   outline: none;
   font-size: 0.95rem;
-  background-color: #1e2a31;
-  color: white;
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
 }
 
-.chat-input input::placeholder { color: #888; }
+.chat-input input::placeholder {
+  color: var(--text-muted);
+}
 
-.send-btn, .emoji-btn {
+.emoji-btn, .attach-btn, .send-btn, .mic-btn {
   background: none;
   border: none;
-  color: #25d366;
+  color: var(--text-muted);
   cursor: pointer;
-  font-size: 1.3rem;
-  margin-left: 10px;
+  font-size: 1.4rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.emoji-btn:hover, .attach-btn:hover, .send-btn:hover, .mic-btn:hover {
+  background-color: var(--bg-tertiary);
+}
+
+.send-btn {
+  color: var(--accent-color);
+}
+
+.mic-btn {
+  color: var(--accent-color);
 }

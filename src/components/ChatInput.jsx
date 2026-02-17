@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/ChatInput.css";
 
-const ChatInput = ({ sendMessage }) => {
+const ChatInput = ({ sendMessage, selectedUser }) => {
   const [text, setText] = useState("");
 
   const handleSend = () => {
@@ -14,6 +14,7 @@ const ChatInput = ({ sendMessage }) => {
   return (
     <div className="chat-input">
       <button className="emoji-btn">😊</button>
+      <button className="attach-btn">📎</button>
       <input
         type="text"
         placeholder="Type a message"
@@ -21,7 +22,11 @@ const ChatInput = ({ sendMessage }) => {
         onChange={(e) => setText(e.target.value)}
         onKeyDown={(e) => e.key === "Enter" && handleSend()}
       />
-      <button className="send-btn" onClick={handleSend}>➡️</button>
+      {text.trim() ? (
+        <button className="send-btn" onClick={handleSend}>➡️</button>
+      ) : (
+        <button className="mic-btn">🎤</button>
+      )}
     </div>
   );
 };
